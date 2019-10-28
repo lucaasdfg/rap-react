@@ -1,13 +1,36 @@
 import React, {Component} from "react"
 
 class Word extends Component {
-    render(){
-        var myArray = ['January', 'February', 'March']; 
-        var rand = myArray[(Math.random() * myArray.length) | 0]
-        return(
-            <div>{rand}</div>
-        )
+    state={
+        randomItem:''
     }
+  
+    myArray = [
+        "Apples",
+        "Bananas",
+        "Pears"
+    ];
+  
+    randomItemGenerator = () => (
+        this.myArray[Math.floor(Math.random()*this.myArray.length)]
+    )
+  
+    componentDidMount(){
+        this.interval = setInterval(() => {
+            this.setState({randomItem:this.randomItemGenerator()})
+        }, 10000)
+    }
+    componentWillUnmount(){
+        this.interval && clearInterval(this.interval)
+    }
+  
+    render(){
+       return(
+          <div>{this.state.randomItem}</div>
+       )
+    }
+    
+    
 }
 export default Word
 
