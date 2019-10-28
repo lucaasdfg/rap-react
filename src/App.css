@@ -20,3 +20,22 @@
 .App-link {
   color: #09d3ac;
 }
+* {
+  margin-block-start: 0;
+}
+h1 {
+  font-size: 76px;
+  color: #333b41;
+}
+
+h2 {
+  margin-block-start: 0;
+  color: #333b41;
+}
+h3 {
+  background-color: #333b41;
+  color:white;
+  margin: 0 40px 0 40px;
+  border-radius: 40px;
+  font-size: 46px;
+}
