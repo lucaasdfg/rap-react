@@ -1,11 +1,15 @@
 import React, {Component} from "react"
 
+
+
 class Timer extends Component{
+   
     state = {
         minutes: 5,
         seconds: 10,
         randomItem: ""
     }
+    
     randomItemGenerator = () => (
         this.myArray[Math.floor(Math.random()*this.myArray.length)]
     )
@@ -36,6 +40,7 @@ class Timer extends Component{
         }, 1000)
         
     }
+      
     myArray = [
         "esplendor",
         "diciendo",
@@ -44,11 +49,6 @@ class Timer extends Component{
         "terreno",
         "instante",
     ];
-  
-    
-
-    
-    
     render(){
         const {minutes, seconds} = this.state
 

@@ -1,38 +1,39 @@
 import React, {Component} from "react"
 
-class Word extends Component {
-    state={
-        randomItem:''
+const myArray = [
+    "esplendor",
+    "diciendo",
+    "impredecible",
+    "problema",
+    "terreno",
+    "instante",
+  ]
+  
+  const randomItemGenerator = () => (
+    myArray[Math.floor(Math.random() * myArray.length)]
+  )
+  
+  class Word extends React.Component {
+    state = {
+      randomItem: randomItemGenerator()
     }
   
-    myArray = [
-        "esplendor",
-        "diciendo",
-        "impredecible",
-        "problema",
-        "terreno",
-        "instante",
-    ];
-  
-    randomItemGenerator = () => (
-        this.myArray[Math.floor(Math.random()*this.myArray.length)]
-    )
-  
-    componentDidMount(){
-        this.interval = setInterval(() => {
-            this.setState({randomItem:this.randomItemGenerator()})
-        }, 10000)
+    componentDidMount() {
+      this.interval = setInterval(() => {
+        this.setState({
+          randomItem: randomItemGenerator()
+        })
+      }, 10000)
     }
     
-    
-  
-    render(){
-       return(
-          <div><h3>{this.state.randomItem}</h3></div>
-       )
+    componentWillUnmount() { // clear the interval when the component is unmounted
+      clearInterval(this.interval);
     }
-    
-    
-}
-export default Word;
-
+  
+    render() {
+      return (
+        <div><h3>{this.state.randomItem}</h3></div>
+      )
+    }
+  }
+  export default Word;
