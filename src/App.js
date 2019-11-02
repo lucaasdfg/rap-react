@@ -6,8 +6,8 @@ import Word from "./Components/Word"
 function App() {
   return (
     <div className="App">
-      <Timer />
       <Word/>
+      <Timer/>
     </div>
   );
 }

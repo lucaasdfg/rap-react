@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React from "react"
 
 const myArray = [
     "esplendor",
@@ -32,7 +32,7 @@ const myArray = [
   
     render() {
       return (
-        <div><h3>{this.state.randomItem}</h3></div>
+        <div className="alpha"><h3>{this.state.randomItem}</h3></div>
       )
     }
   }

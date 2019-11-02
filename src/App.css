@@ -40,3 +40,12 @@ h3 {
   font-size: 46px;
   color: rgb(245, 245, 245);
 }
+
+.alpha {
+height: 100px;
+background-color: red;
+}
+
+.omega {
+  background-color: red;
+}

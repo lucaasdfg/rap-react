@@ -1,7 +1,16 @@
 import React, {Component} from "react"
 
-
-
+const myArray = [
+    "esplendor",
+    "diciendo",
+    "impredecible",
+    "problema",
+    "terreno",
+    "instante",
+  ]
+const randomItemGenerator = () => (
+    myArray[Math.floor(Math.random() * myArray.length)]
+  )
 class Timer extends Component{
    
     state = {
@@ -10,12 +19,9 @@ class Timer extends Component{
         randomItem: ""
     }
     
-    randomItemGenerator = () => (
-        this.myArray[Math.floor(Math.random()*this.myArray.length)]
-    )
     componentDidMount(){
         this.interval = setInterval(() => {
-            this.setState({randomItem:this.randomItemGenerator()})
+            this.setState({randomItem:randomItemGenerator()})
         }, 10000)
         
         this.myInterval = setInterval(()=> {
@@ -30,8 +36,7 @@ class Timer extends Component{
                 if(minutes === 0){
                     clearInterval(this.myInterval)
                 }else {
-                    this.setState(({minutes}) => ({
-                        minutes: minutes-1,
+                    this.setState(({seconds}) => ({
                         seconds: 10
                     }))
                 }
@@ -50,12 +55,11 @@ class Timer extends Component{
         "instante",
     ];
     render(){
-        const {minutes, seconds} = this.state
+        const {seconds} = this.state
 
         return(
-            <div>
-                {minutes === 0 && seconds === 0 ? <h1>finish</h1> : <h1>{seconds}</h1>}
-                <h2>{this.state.randomItem}</h2>
+            <div className="omega">
+                { seconds === 0 ? <h1>finish</h1> : <h1>{seconds}</h1>}
             </div>
         )
     }
