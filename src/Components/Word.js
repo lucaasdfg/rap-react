@@ -1,12 +1,38 @@
 import React from "react"
 
 const myArray = [
-    "esplendor",
-    "diciendo",
-    "impredecible",
+    "siempre",
+    "muerte",
+    "teoría",
     "problema",
-    "terreno",
+    "perplejo",
     "instante",
+    "presente",
+    "antes",
+    "martes",
+    "experimento",
+    "traidor",
+    "voltaje",
+    "volumen",
+    "rapido",
+    "quemado",
+    "aprendiendo",
+    "practica",
+    "campeón",
+    "malo",
+    "helado",
+    "tranquilo",
+    "preparado",
+    "atento",
+    "olvidado",
+    "frecuente",
+    "mente",
+    "demente",
+    "acelerado",
+    "muchacho",
+    "elevado",
+    "catapulta",
+    "monstruo"
   ]
   
   const randomItemGenerator = () => (
