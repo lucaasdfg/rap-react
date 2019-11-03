@@ -33,7 +33,7 @@ const myArray = [
     "elevado",
     "catapulta",
     "monstruo"
-  ]
+]
   
   const randomItemGenerator = () => (
     myArray[Math.floor(Math.random() * myArray.length)]
@@ -58,7 +58,9 @@ const myArray = [
   
     render() {
       return (
-        <div className="alpha"><h3>{this.state.randomItem}</h3></div>
+        <div className="alpha"><h3>{this.state.randomItem}</h3>
+        
+        </div>
       )
     }
   }

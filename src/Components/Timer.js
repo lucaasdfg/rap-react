@@ -46,14 +46,6 @@ class Timer extends Component{
         
     }
       
-    myArray = [
-        "esplendor",
-        "diciendo",
-        "impredecible",
-        "problema",
-        "terreno",
-        "instante",
-    ];
     render(){
         const {seconds} = this.state
 
